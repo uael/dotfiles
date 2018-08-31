@@ -64,7 +64,7 @@ Xft.lcdfilter : lcddefault
 xterm*termName        : screen-256color
 xterm*renderFont      : true
 xterm*faceName        : Terminess Powerline
-xterm*faceSize        : 10
+xterm*faceSize        : 9
 xterm*locale          : true
 xterm*metaSendsEscape : true
 xterm*eightBitInput   : false
@@ -110,8 +110,8 @@ xterm*colorBD : acc70
 xterm*colorUL : acb70
 
 xterm*VT100.Translations: #override \
- Ctrl Alt <Key>V: insert-selection(CLIPBOARD) \n\
- Ctrl Alt <Key>C: copy-selection(CLIPBOARD) \n\
+	Ctrl Alt <Key>V: insert-selection(CLIPBOARD) \n\
+	Ctrl Alt <Key>C: copy-selection(CLIPBOARD) \n\
 
 xterm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
 
