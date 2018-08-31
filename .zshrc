@@ -7,3 +7,5 @@ PREZTO_DIR="${ZDOTDIR:-$HOME}/.zprezto"
 if [[ -s "${PREZTO_DIR}/init.zsh" ]]; then
   source "${PREZTO_DIR}/init.zsh"
 fi
+
+[[ -d "$HOME/.dircolors" ]] && eval `dircolors $HOME/.dircolors`
