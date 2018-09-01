@@ -2,15 +2,27 @@
 # uael's dot zplug.zsh
 #
 
+# Let zplug manage zplug
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
 # From prezto
-zplug "modules/history",    from:prezto
-zplug "modules/utility",    from:prezto
-zplug "modules/terminal",   from:prezto
-zplug "modules/editor",     from:prezto
-zplug "modules/directory",  from:prezto
-zplug "modules/completion", from:prezto
-zplug "modules/git",        from:prezto
-zplug "modules/prompt",     from:prezto
+zplug 'modules/environment', from:prezto
+zplug 'modules/terminal',    from:prezto
+zplug 'modules/editor',      from:prezto
+zplug 'modules/history',     from:prezto
+zplug 'modules/directory',   from:prezto
+zplug 'modules/spectrum',    from:prezto
+zplug 'modules/utility',     from:prezto
+zplug 'modules/completion',  from:prezto
+zplug 'modules/git',         from:prezto
+zplug 'modules/prompt',      from:prezto
+
+zstyle ':prezto:*:*' color 'yes'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
+zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':prezto:module:tmux:iterm' integrate 'no'
+zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 
 # From zsh-users
 zplug "zsh-users/zsh-completions",              defer:0
