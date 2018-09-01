@@ -18,6 +18,9 @@ if [[ -f ~/.zplug/init.zsh ]]; then
     echo
   fi
   
+  # Prompt
+  zstyle ':prezto:module:prompt' theme 'agnoster' 
+  
   # We're done, load everything
   zplug load
 fi
@@ -25,9 +28,6 @@ fi
 if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
-
-# Prompt
-zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Variables
 export PATH="${PATH}:${HOME}/bin"
