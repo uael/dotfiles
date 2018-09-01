@@ -1,76 +1,183 @@
-! ------------------------------------------------------------------------------
-! URxvt Options
-! ------------------------------------------------------------------------------
-URxvt.scrollBar: false
-URxvt.scrollBar_right: false
-URxvt.scrollBar_floating: false
-URxvt.font: xft:Inconsolata\-dz:style=dz:size=16,xft:Inconsolata for Powerline:size=16
-URxvt.perl-ext-common: font-size
-URxvt.keysym.C-plus:     font-size:increase
-URxvt.keysym.C-minus:   font-size:decrease
-URxvt.keysym.C-equal:  font-size:reset
+! ------------------------------------------------------------
+! XFT
+! ------------------------------------------------------------
 
-! ------------------------------------------------------------------------------
-! Base16 Default Dark
-! ------------------------------------------------------------------------------
-#define base00 #181818
-#define base01 #282828
-#define base02 #383838
-#define base03 #585858
-#define base04 #b8b8b8
-#define base05 #d8d8d8
-#define base06 #e8e8e8
-#define base07 #f8f8f8
-#define base08 #ab4642
-#define base09 #dc9656
-#define base0A #f7ca88
-#define base0B #a1b56c
-#define base0C #86c1b9
-#define base0D #7cafc2
-#define base0E #ba8baf
-#define base0F #a16946
+Xft.dpi       : 96
+Xft.antialias : true
+Xft.hinting   : true
+Xft.rgba      : rgb
+Xft.autohint  : false
+Xft.hintstyle : hintfull
+Xft.lcdfilter : lcddefault
 
-*.foreground:   base05
-#ifdef background_opacity
-*.background:   [background_opacity]base00
-#else
-*.background:   base00
-#endif
-*.cursorColor:  base05
+! ------------------------------------------------------------
+! Variables
+! ------------------------------------------------------------
 
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
+#define base1 #141A1F
+#define acr50 #EC5252
+#define acg50 #5DA713
+#define aco50 #C97016
+#define acb50 #3890E9
+#define acv50 #A359ED
+#define acc50 #13AFAF
+#define base3 #6B859E
+#define base2 #1A2128
+#define acr70 #FF9191
+#define acg70 #9ACD68
+#define aco70 #EDA55D
+#define acb70 #7DBEFF
+#define acv70 #CB96FF
+#define acc70 #6ECFCF
+#define base4 #A6B5C5
 
-*.color8:       base03
-*.color9:       base08
-*.color10:      base0B
-*.color11:      base0A
-*.color12:      base0D
-*.color13:      base0E
-*.color14:      base0C
-*.color15:      base07
+*.foreground  : base4
+*.background  : base1
+*.cursorColor : base4
 
-! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
-! use 'shell' template to set these if necessary
-*.color16:      base09
-*.color17:      base0F
-*.color18:      base01
-*.color19:      base02
-*.color20:      base04
-*.color21:      base06
+*.color0  : base1
+*.color1  : acr50
+*.color2  : acg50
+*.color3  : aco50
+*.color4  : acb50
+*.color5  : acv50
+*.color6  : acc50
+*.color7  : base3
+*.color8  : base2
+*.color9  : acr70
+*.color10 : acg70
+*.color11 : aco70
+*.color12 : acb70
+*.color13 : acv70
+*.color14 : acc70
+*.color15 : base4
 
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-! State:           'bg',    'fg',    'bgalt', 'hlbg',  'hlfg'
-rofi.color-normal: #181818, #f8f8f8, #181818, #ab4642, #181818
-rofi.color-urgent: #181818, #ab4642, #181818, #ab4642, #181818
-rofi.color-active: #181818, #7cafc2, #181818, #7cafc2, #181818
-!                  'bg',    'border'
-rofi.color-window: #181818, #f8f8f8
+! Manpage colors
+*.colorIT : acr70
+*.colorBD : acc70
+*.colorUL : acb70
+
+! ------------------------------------------------------------
+! XTerm
+! ------------------------------------------------------------
+
+xterm*termName        : screen-256color
+xterm*renderFont      : true
+xterm*faceName        : Terminess Powerline
+xterm*faceSize        : 9
+xterm*locale          : true
+xterm*metaSendsEscape : true
+xterm*eightBitInput   : false
+xterm*eightBitControl : false
+xterm*eightBitOutput  : true
+xterm*loginShell      : true
+xterm*scrollBar       : false
+xterm*saveLines       : 4096
+xterm*utf8            : 2
+xterm*jumpScroll      : true
+xterm*multiScroll     : true
+xterm*trimSelection   : true
+
+xterm*cursorUnderline : true
+xterm*cursorBlink     : false
+xterm*dynamicColors   : true
+xterm*boldMode        : true
+xterm*colorBDMode     : false
+
+xterm*background  : base1
+xterm*foreground  : base4
+xterm*cursorColor : base4
+
+xterm*color0  : base1
+xterm*color1  : acr50
+xterm*color2  : acg50
+xterm*color3  : aco50
+xterm*color4  : acb50
+xterm*color5  : acv50
+xterm*color6  : acc50
+xterm*color7  : base3
+xterm*color8  : base2
+xterm*color9  : acr70
+xterm*color10 : acg70
+xterm*color11 : aco70
+xterm*color12 : acb70
+xterm*color13 : acv70
+xterm*color14 : acc70
+xterm*color15 : base4
+
+xterm*colorIT : acr70
+xterm*colorBD : acc70
+xterm*colorUL : acb70
+
+xterm*VT100.Translations: #override \
+	Ctrl Alt <Key>V: insert-selection(CLIPBOARD) \n\
+	Ctrl Alt <Key>C: copy-selection(CLIPBOARD) \n\
+
+xterm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
+
+! ------------------------------------------------------------
+! Rofi
+! ------------------------------------------------------------
+
+rofi.modi              : run,window
+rofi.terminal          : /usr/bin/urxvtc
+rofi.run-shell-command : /usr/bin/urxvtc -e '{cmd}'
+rofi.ssh-command       : tmux split-window -h -p 50 '{ssh-client} {host}'
+rofi.sidebar-mode      : true
+rofi.fuzzy             : true
+rofi.font              : Terminus\ 13
+rofi.location          : 0
+rofi.width             : 32
+rofi.padding           : 2
+rofi.borderwidth       : 1
+rofi.columns           : 1
+rofi.lines             : 8
+rofi.separator-style   : none
+
+! Key bindings
+rofi.kb-accept-entry        : Control+m,Return,KP_Enter
+rofi.kb-cancel              : Escape,Control+c
+rofi.kb-mode-next           : Control+l
+rofi.kb-mode-previous       : Control+h
+rofi.kb-row-down            : Control+j
+rofi.kb-row-up              : Control+k
+rofi.kb-remove-to-eol       : Control+y
+rofi.kb-remove-to-sol       : Control+u
+rofi.kb-remove-char-back    : Control+s,BackSpace
+rofi.kb-remove-char-forward : Control+d,Delete
+
+! Colors            bg     fg     altbg  hlbg   hlfg
+rofi.color-normal : base1, base4, base1, base2, acc50
+rofi.color-urgent : base1, acg50, base2, base1, acc50
+rofi.color-active : base1, acg50, base2, base2, acg50
+rofi.color-window : base1, acc50, base3
+rofi.bw           : 1
+
+! ------------------------------------------------------------
+! Information
+! ------------------------------------------------------------
+
+! XTerm escape sequences
+! 10;  = base4 (foreground)
+! 11;  = base1 (background)
+! 12;  = base4 (cursorColor)
+! 708; = base1 (borderColor)
+! 4;1  = acr50
+! 4;2  = acg50
+! 4;3  = aco50
+! 4;4  = acb50
+! 4;5  = acv50
+! 4;6  = acc50
+! 4;7  = base3
+! 4;8  = base2
+! 4;9  = acr70
+! 4;10 = acg70
+! 4;11 = aco70
+! 4;12 = acb70
+! 4;13 = acv70
+! 4;14 = acc70
+! 4;15 = base4
+! 710; = set normal font
+! 711; = set bold font
+! 712; = set italic font
+! 713; = set bold italic font

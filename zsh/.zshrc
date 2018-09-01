@@ -1,11 +1,29 @@
 #
-# .zshrc 
+# uael's dot zshrc
 #
 
-# Source Prezto or init.
-PREZTO_DIR="${ZDOTDIR:-$HOME}/.zprezto"
-if [[ -s "${PREZTO_DIR}/init.zsh" ]]; then
-  source "${PREZTO_DIR}/init.zsh"
-fi
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
 
-[[ -d "$HOME/.dircolors" ]] && eval `dircolors $HOME/.dircolors`
+# if the init scipt doesn't exist
+if ! zgen saved; then
+  echo "Creating a zgen save"
+
+  echo "Creating a zgen save"
+
+  # prezto options
+  zgen prezto editor key-bindings 'emacs'
+  zgen prezto prompt theme 'sorin'
+
+  # prezto and modules
+  zgen prezto
+  zgen prezto git
+  zgen prezto command-not-found
+  zgen prezto syntax-highlighting
+
+  # plugins
+  zgen load /path/to/super-secret-private-plugin
+
+  # save all to init script
+  zgen save
+fi

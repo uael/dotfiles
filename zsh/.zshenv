@@ -1,1 +1,0 @@
-/home/uael/.zprezto/runcoms/zshenv
