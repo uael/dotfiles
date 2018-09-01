@@ -2,6 +2,9 @@
 # uael's local dot zshrc
 #
 
+# Prompt
+zstyle ':prezto:module:prompt' theme 'sorin'
+
 # Variables
 export PATH="${PATH}:${HOME}/bin"
 export BROWSER="firefox"
