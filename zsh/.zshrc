@@ -25,3 +25,13 @@ fi
 if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
+
+# Prompt
+zstyle ':prezto:module:prompt' theme 'sorin'
+
+# Variables
+export PATH="${PATH}:${HOME}/bin"
+export BROWSER="firefox"
+export EDITOR="vim"
+
+# Aliases

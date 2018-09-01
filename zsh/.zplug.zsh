@@ -20,9 +20,6 @@ zplug 'modules/prompt',      from:prezto
 zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:module:editor' dot-expansion 'yes'
 zstyle ':prezto:module:prompt' theme 'sorin'
-zstyle ':prezto:module:terminal' auto-title 'yes'
-zstyle ':prezto:module:tmux:iterm' integrate 'no'
-zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 
 # From zsh-users
 zplug "zsh-users/zsh-completions",              defer:0
