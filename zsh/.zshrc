@@ -19,7 +19,7 @@ if [[ -f ~/.zplug/init.zsh ]]; then
   fi
   
   # Prompt
-  zstyle ':prezto:module:prompt' theme 'agnoster' 
+  #zstyle ':prezto:module:prompt' theme 'agnoster' 
   
   # We're done, load everything
   zplug load
@@ -29,9 +29,5 @@ if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
 
-# Variables
-export PATH="${PATH}:${HOME}/bin"
-export BROWSER="firefox"
-export EDITOR="vim"
-
-# Aliases
+# Keep bash compatibility
+source ~/.bashrc
