@@ -1,0 +1,11 @@
+#
+# uael's local dot zshrc
+#
+
+# Variables
+export PATH="${PATH}:${HOME}/bin"
+export BROWSER="firefox"
+export EDITOR="vim"
+
+# Aliases
+

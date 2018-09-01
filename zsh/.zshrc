@@ -2,28 +2,27 @@
 # uael's dot zshrc
 #
 
-# load zgen
-source "${HOME}/.zgen/zgen.zsh"
 
-# if the init scipt doesn't exist
-if ! zgen saved; then
-  echo "Creating a zgen save"
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-  echo "Creating a zgen save"
+if [[ -f ~/.zplug/init.zsh ]]; then
+  export ZPLUG_LOADFILE=~/.zplug.zsh
+  source ~/.zplug/init.zsh
 
-  # prezto options
-  zgen prezto editor key-bindings 'emacs'
-  zgen prezto prompt theme 'sorin'
+  # Install plugins if needed
+  if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+      echo; zplug install
+    fi
+    echo
+  fi
+  
+  # We're done, load everything
+  zplug load
+fi
 
-  # prezto and modules
-  zgen prezto
-  zgen prezto git
-  zgen prezto command-not-found
-  zgen prezto syntax-highlighting
-
-  # plugins
-  zgen load /path/to/super-secret-private-plugin
-
-  # save all to init script
-  zgen save
+if [[ -f ~/.zshrc.local ]]; then
+  source ~/.zshrc.local
 fi
