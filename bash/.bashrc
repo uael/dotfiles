@@ -8,7 +8,7 @@
 # Variables
 export PATH="${PATH}:${HOME}/bin"
 export BROWSER="firefox"
-export EDITOR="vim"
+export EDITOR="emacs"
 
 # Prompt
 [[ "$UID" = "0" ]] && COL="\[\033[0;31m\]" || COL="\[\033[0;36m\]"
@@ -29,4 +29,6 @@ if [ -x /usr/bin/dircolors ]; then
     || eval "$(dircolors -b)"
 
   export LS_OPTIONS='--color=auto'
-fi	
+fi
+
+source ~/.bash_aliases

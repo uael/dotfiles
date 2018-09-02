@@ -18,12 +18,19 @@ if [[ -f ~/.zplug/init.zsh ]]; then
     echo
   fi
   
-  # Prompt
-  #zstyle ':prezto:module:prompt' theme 'agnoster' 
-  
   # We're done, load everything
   zplug load
 fi
+
+# zsh highlighters
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
+# zsh highlighters styles
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=yellow,bold'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=yellow,bold'
+ZSH_HIGHLIGHT_STYLES[command]='fg=yellow,bold'
+ZSH_HIGHLIGHT_STYLES[function]='fg=yellow,bold'
 
 if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
