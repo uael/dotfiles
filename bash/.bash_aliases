@@ -4,4 +4,5 @@
 
 # emacs
 alias emacs='emacs --no-window-system'
+alias e='emacs'
 
