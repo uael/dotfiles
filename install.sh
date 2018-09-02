@@ -3,8 +3,10 @@
 ARED="\e[91m"
 ARESET="\e[0m"
 
-clear
+# Move to dotfiles project source directory
+cd "$(dirname ${BASH_SOURCE[0]})"
 
+# Uninstall using stow
 if [[ $1 = "-u" ]] || [[ $1 = "--uninstall" ]]; then
   for ITEM in `ls -d */`; do
     ( stow -D $ITEM --target=${HOME} )
@@ -14,7 +16,7 @@ else
 
   if ! [[ -f /etc/apt/sources.list.d/uael.list ]]; then 
     echo "Aptitude..."
-    sudo cp ./sources.list /etc/apt/sources.list.d/uael.list
+    sudo cp sources.list /etc/apt/sources.list.d/uael.list
     sudo apt update
     sudo apt dist-upgrade
     sudo apt upgrade
@@ -25,15 +27,15 @@ else
   
   echo "Dotfiles..."
   for ITEM in `ls -d */`; do
-    TEMP=`echo $ITEM | sed s'/.$//'`
+    TEMP=$(basename $ITEM)
     echo -en "Setup config for $ARED$TEMP$ARESET? (y/n) "
     
     read USRINPUT
     case "$USRINPUT" in
       y) ( stow $ITEM --target=${HOME} );;
-      *) printf "Skipping $TEMP\n" ;;
+      *) echo "Skipping $TEMP" ;;
     esac
   done
   
-  printf "Done !\n"
+  echo "Done !"
 fi
