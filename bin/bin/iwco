@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+
+SPOT=$(iwscan $@)
+
+if [[ -z ${SPOT} || $(echo ${SPOT} | wc -l) != '1' ]]; then
+ echo "Did not find any spots corresponding to '$@', be more specifif"
+ [[ -n ${SPOT-unset} ]] && echo ${SPOT}
+ exit 1
+fi
+
+echo "Connection to ${SPOT}.."
+
+CONF=/etc/wpa_supplicant/${SPOT}.conf
+if ! [[ -f ${CONF} ]]; then
+  echo "Enter passphrase please.."
+  sudo bash -c "wpa_passphrase ${SPOT} > ${CONF}"
+fi
+
+sudo pkill wpa_supplicant
+sudo pkill dhclient
+sudo wpa_supplicant -B -iwlp3s0 -c${CONF}
+sudo dhclient

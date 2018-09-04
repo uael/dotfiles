@@ -12,7 +12,6 @@ if [[ $1 = "-u" ]] || [[ $1 = "--uninstall" ]]; then
     ( stow -D $ITEM --target=${HOME} )
   done
 else
-  clear
 
   if ! [[ -f /etc/apt/sources.list.d/uael.list ]]; then 
     echo "Aptitude..."
@@ -28,13 +27,8 @@ else
   echo "Dotfiles..."
   for ITEM in `ls -d */`; do
     TEMP=$(basename $ITEM)
-    echo -en "Setup config for $ARED$TEMP$ARESET? (y/n) "
-    
-    read USRINPUT
-    case "$USRINPUT" in
-      y) ( stow $ITEM --target=${HOME} );;
-      *) echo "Skipping $TEMP" ;;
-    esac
+    echo -e "Setup config for $ARED$TEMP$ARESET"
+    ( stow $ITEM --target=${HOME} )
   done
   
   echo "Done !"
