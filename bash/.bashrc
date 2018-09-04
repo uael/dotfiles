@@ -8,7 +8,9 @@
 # Variables
 export PATH="${PATH}:${HOME}/bin"
 export BROWSER="firefox"
-export EDITOR="emacs"
+export ALTERNATE_EDITOR=''
+export EDITOR='emacsclient -t'
+export GIT_EDITOR="$EDITOR"
 
 # Prompt
 [[ "$UID" = "0" ]] && COL="\[\033[0;31m\]" || COL="\[\033[0;36m\]"
@@ -30,5 +32,15 @@ if [ -x /usr/bin/dircolors ]; then
 
   export LS_OPTIONS='--color=auto'
 fi
+
+# Functions
+up() {
+  sudo apt-get update        && \
+  sudo apt-get upgrade -y    && \
+  sudo apt-get autoremove -y && \
+  sudo apt-get autoclean     && \
+  sudo apt-get clean         && \
+  true
+}
 
 source ~/.bash_aliases

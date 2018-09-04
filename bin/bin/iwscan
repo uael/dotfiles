@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+sudo iwlist scan 2>/dev/null | grep -i ".*ESSID:\".*$@.*\"" | sed 's|.*ESSID:||g' | tr -d \"

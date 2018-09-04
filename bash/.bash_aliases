@@ -3,6 +3,6 @@
 #
 
 # emacs
-alias emacs='emacs --no-window-system'
-alias e='emacs'
+alias emacs='emacsclient -c -a emacs'
+alias e='emacs -nw'
 
