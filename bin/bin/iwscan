@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+sudo ip link set up wlp3a0
 sudo iwlist scan 2>/dev/null | grep -i ".*ESSID:\".*$@.*\"" | sed 's|.*ESSID:||g' | tr -d \"
