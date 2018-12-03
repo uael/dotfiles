@@ -40,4 +40,4 @@ fi
 source ~/.bashrc
 
 # opam configuration
-test -r /home/uael/.opam/opam-init/init.zsh && . /home/uael/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh 1>&- 2>&- || true
