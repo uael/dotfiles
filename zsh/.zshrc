@@ -38,3 +38,6 @@ fi
 
 # Keep bash compatibility
 source ~/.bashrc
+
+# opam configuration
+test -r /home/uael/.opam/opam-init/init.zsh && . /home/uael/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

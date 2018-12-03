@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
-SPOT=$(iwscan $@)
+if [[ -z ${SPOT} ]]; then
+  SPOT=$(iwscan $@)
+fi
 
 if [[ -z ${SPOT} || $(echo ${SPOT} | wc -l) != '1' ]]; then
  echo "Did not find any spots corresponding to '$@', be more specifif"
