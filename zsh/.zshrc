@@ -39,5 +39,3 @@ fi
 # Keep bash compatibility
 source ~/.bashrc
 
-# opam configuration
-test -r ~/.opam/opam-init/init.zsh && . ~/.opam/opam-init/init.zsh 1>&- 2>&- || true
