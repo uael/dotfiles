@@ -73,34 +73,3 @@ xterm*VT100.Translations: #override \
 	Ctrl Alt <Key>C: copy-selection(CLIPBOARD) \n\
 
 xterm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
-
-! ------------------------------------------------------------
-! Rofi
-! ------------------------------------------------------------
-
-rofi.modi              : run,window
-rofi.terminal          : /usr/bin/urxvtc
-rofi.run-shell-command : /usr/bin/urxvtc -e '{cmd}'
-rofi.ssh-command       : tmux split-window -h -p 50 '{ssh-client} {host}'
-rofi.sidebar-mode      : true
-rofi.fuzzy             : true
-rofi.font              : Terminus\ 13
-rofi.location          : 0
-rofi.width             : 32
-rofi.padding           : 2
-rofi.borderwidth       : 1
-rofi.columns           : 1
-rofi.lines             : 8
-rofi.separator-style   : none
-
-! Key bindings
-rofi.kb-accept-entry        : Control+m,Return,KP_Enter
-rofi.kb-cancel              : Escape,Control+c
-rofi.kb-mode-next           : Control+l
-rofi.kb-mode-previous       : Control+h
-rofi.kb-row-down            : Control+j
-rofi.kb-row-up              : Control+k
-rofi.kb-remove-to-eol       : Control+y
-rofi.kb-remove-to-sol       : Control+u
-rofi.kb-remove-char-back    : Control+s,BackSpace
-rofi.kb-remove-char-forward : Control+d,Delete
