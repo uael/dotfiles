@@ -3,6 +3,7 @@
 !.gitmodules
 !.gitconfig
 !.xinitrc
+!.xsessionrc
 !/.config
 /.config/*
 !.config/packages.txt
@@ -21,6 +22,7 @@
 !/.config/Code/User/settings.json
 !/.config/Code/extensions.txt
 !/.config/Code/theme.json
+!/.config/nixpkgs/
 !/w
 /w/*
 !/w/suckless/
