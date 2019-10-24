@@ -1,0 +1,3 @@
+[submodule "w/suckless"]
+	path = w/suckless
+	url = https://github.com/uael/suckless

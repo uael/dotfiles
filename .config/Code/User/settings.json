@@ -1,0 +1,119 @@
+{
+    "explorer.confirmDelete": false,
+    "editor.fontFamily": "'FuraCode Nerd Font'",
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "editor.minimap.enabled": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.statusBar.visible": true,
+    "files.autoSave": "onFocusChange",
+    "workbench.iconTheme": "material-icon-theme",
+    "materialTheme.accent": "Orange",
+    "material-icon-theme.hidesExplorerArrows": true,
+    "material-icon-theme.saturation": 1,
+    "editor.fontLigatures": true,
+    "workbench.commandPalette.preserveInput": true,
+    "workbench.list.multiSelectModifier": "alt",
+    "workbench.sideBar.location": "left",
+    "workbench.colorTheme": "Material Theme Mono",
+
+    "ccls.codeLens.enabled": false,
+    "ccls.completion.detailedLabel": true,
+    "ccls.completion.enableSnippetInsertion": true,
+
+    "ccls.highlight.function.face": [
+        "enabled"
+    ],
+    "ccls.highlight.variable.face": [
+        "enabled"
+    ],
+    "ccls.highlight.type.face": [
+        "enabled"
+    ],
+    "ccls.highlight.enum.face": [
+        "variable",
+        "member"
+    ],
+    "ccls.highlight.macro.face": [
+        "variable",
+        "fontWeight: bolder"
+    ],
+    "ccls.highlight.global.face": [
+        "fontWeight: bolder"
+    ],
+    "ccls.highlight.member.face": [
+    ],
+    "ccls.highlight.static.face": [
+        "fontWeight: bold"
+    ],
+    "ccls.highlight.parameter.face": [
+        "variable"
+    ],
+    "ccls.highlight.namespace.face": [
+        "type"
+    ],
+    "ccls.highlight.typeAlias.face": [
+        "type"
+    ],
+    "ccls.highlight.memberFunction.face": [
+        "function",
+        "member"
+    ],
+    "ccls.highlight.globalVariable.face": [
+        "variable",
+        "global"
+    ],
+    "ccls.highlight.memberVariable.face": [
+        "variable",
+        "member"
+    ],
+    "ccls.highlight.staticVariable.face": [
+        "variable",
+        "static"
+    ],
+    "ccls.highlight.staticMemberVariable.face": [
+        "variable",
+        "static"
+    ],
+    "ccls.highlight.staticMemberFunction.face": [
+        "function",
+        "static"
+    ],
+
+    "ccls.highlight.type.colors": ["#bbcccc"],
+    "ccls.highlight.macro.colors": ["#908A28"],
+    "ccls.highlight.function.colors": ["#FFC66D"],
+    "ccls.highlight.variable.colors": ["#9876AA"],
+
+    "editor.rulers": [80],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#424242"
+    },
+    "trailing-spaces.trimOnSave": true,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.views.repositories.location": "explorer",
+    "gitlens.views.fileHistory.location": "explorer",
+    "gitlens.views.lineHistory.location": "explorer",
+    "gitlens.views.search.location": "explorer",
+    "gitlens.views.compare.location": "explorer",
+    "workbench.activityBar.visible": false,
+    "extensions.ignoreRecommendations": true,
+    "cSpell.userWords": [
+        "NYOLO",
+        "POSIX",
+        "Tempow",
+        "endchoice",
+        "endmenu",
+        "mainmenu",
+        "patsubst",
+        "yaya",
+        "yayas",
+        "yolo",
+        "yolos"
+    ],
+    "window.zoomLevel": 0,
+    "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
+    "git.suggestSmartCommit": false,
+    "ccls.index.onChange": true
+}
