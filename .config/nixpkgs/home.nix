@@ -19,10 +19,12 @@ in
   home.packages = with pkgs; [
     alacritty
     alsaUtils
+    arc-theme
     arandr
     gcc-arm-embedded
     bat
     brave
+    capitaine-cursors
     ccls
     dunst
     dwm
@@ -40,6 +42,7 @@ in
     hexedit
     lldb
     lsd
+    neofetch
     nerdfonts
     okular
     pango

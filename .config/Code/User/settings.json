@@ -15,7 +15,7 @@
     "workbench.commandPalette.preserveInput": true,
     "workbench.list.multiSelectModifier": "alt",
     "workbench.sideBar.location": "left",
-    "workbench.colorTheme": "Material Theme Mono",
+    "workbench.colorTheme": "Material Theme Darker",
 
     "ccls.codeLens.enabled": false,
     "ccls.completion.detailedLabel": true,
@@ -115,5 +115,6 @@
     "explorer.confirmDragAndDrop": false,
     "git.autofetch": true,
     "git.suggestSmartCommit": false,
-    "ccls.index.onChange": true
+    "ccls.index.onChange": true,
+    "editor.fontSize": 13
 }

@@ -3,7 +3,18 @@ if [ -z "$HM_XPROFILE_SOURCED" ]; then
 fi
 unset HM_XPROFILE_SOURCED
 
-systemctl --user start hm-graphical-session.target
+systemctl --user start graphical-session.target
+
+cursortheme=capitaine-cursors
+
+(IFS=:
+  for datadir in $XDG_DATA_DIRS; do
+    if [ -x "${datadir}/icons/${cursortheme}" ]; then  
+      xsetroot -xcf ${datadir}/icons/${cursortheme}/cursors/left_ptr 24
+      break
+    fi
+  done
+)
 
 dwm
 
