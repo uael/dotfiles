@@ -42,7 +42,7 @@
 
   gtk = {
     enable = true;
-    font.name = "FuraCode Nerd Font";
+    font.name = "FuraCode Nerd Font 8";
     theme.package = pkgs.adapta-gtk-theme;
     theme.name = "adapta";
   };
