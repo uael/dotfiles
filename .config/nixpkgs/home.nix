@@ -43,7 +43,9 @@
   gtk = {
     enable = true;
     font.name = "FuraCode Nerd Font 8";
-    theme.package = pkgs.adapta-gtk-theme;
-    theme.name = "adapta";
+    theme.package = pkgs.arc-theme;
+    theme.name = "Arc-Dark";
+    iconTheme.package = pkgs.arc-icon-theme;
+    iconTheme.name = "Arc-Dark";
   };
 }
