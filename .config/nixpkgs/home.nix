@@ -11,6 +11,8 @@ let
   slstatus = pkgs.slstatus.override { conf = builtins.readFile ~/.config/suckless/slstatus.config.h; };
 in
 {
+  nixpkgs.config = { allowUnfree = true; };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -22,6 +24,7 @@ in
     bat
     brave
     ccls
+    dunst
     dwm
     jetbrains.clion
     cmake
@@ -49,19 +52,11 @@ in
     slstatus
     tree
     valgrind
+    vanilla-dmz
     vlc
     vscode
     wireshark
   ];
 
   fonts.fontconfig.enableProfileFonts = true;
-
-  gtk = {
-    enable = true;
-    font.name = "FuraCode Nerd Font 8";
-    theme.package = pkgs.arc-theme;
-    theme.name = "Arc-Dark";
-    iconTheme.package = pkgs.arc-icon-theme;
-    iconTheme.name = "Arc-Dark";
-  };
 }

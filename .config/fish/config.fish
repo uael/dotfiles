@@ -11,3 +11,6 @@ end
 add_to_path ~/.local/bin
 add_to_path ~/.cargo/bin
 add_to_path ~/.nix-profile/bin
+
+alias ls=lsd
+alias cat=bat

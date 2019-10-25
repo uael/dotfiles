@@ -1,0 +1,5 @@
+gtk-font-name = "FuraCode Nerd Font 8"
+gtk-icon-theme-name = "Arc"
+gtk-theme-name = "Arc-dark"
+gtk-cursor-theme-name="Vanilla-DMZ"
+gtk-cursor-theme-size=128
