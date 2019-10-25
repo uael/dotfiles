@@ -23,6 +23,7 @@
 !/.config/Code/extensions.txt
 !/.config/Code/theme.json
 !/.config/nixpkgs/
+!/.config/suckless
 !/w
 /w/*
 !/w/suckless/

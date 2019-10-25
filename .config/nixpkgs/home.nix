@@ -1,5 +1,15 @@
 { config, pkgs, ... }:
 
+let
+  clang = pkgs.clang_8.overrideAttrs (oldAttrs: { meta.priority = 1; }); 
+  dwm = pkgs.dwm.overrideAttrs (oldAttrs: {
+    patches = [ ~/.config/suckless/dwm.patches.patch ];
+    configurePhase = ''
+      cp ${~/.config/suckless/dwm.config.h} config.h;
+    '';
+  });
+  slstatus = pkgs.slstatus.override { conf = builtins.readFile ~/.config/suckless/slstatus.config.h; };
+in
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -9,10 +19,13 @@
     alsaUtils
     arandr
     gcc-arm-embedded
+    bat
     brave
     ccls
+    dwm
     jetbrains.clion
     cmake
+    clang
     dmenu
     gawk
     gcc
@@ -22,7 +35,8 @@
     gnupg
     gnuplot
     hexedit
-    pkgs.lldb
+    lldb
+    lsd
     nerdfonts
     okular
     pango
@@ -30,7 +44,9 @@
     python
     qbittorrent
     qemu
+    rustup
     slock
+    slstatus
     tree
     valgrind
     vlc
