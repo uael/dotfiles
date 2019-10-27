@@ -21,6 +21,7 @@ in
     alsaUtils
     arc-theme
     arandr
+    acpi
     bat
     brave
     capitaine-cursors

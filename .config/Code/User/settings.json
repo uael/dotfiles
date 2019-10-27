@@ -5,17 +5,22 @@
     "editor.renderControlCharacters": true,
     "editor.minimap.enabled": false,
     "window.menuBarVisibility": "toggle",
-    "workbench.statusBar.visible": true,
+    "workbench.statusBar.visible": false,
     "files.autoSave": "onFocusChange",
     "workbench.iconTheme": "material-icon-theme",
     "materialTheme.accent": "Orange",
     "material-icon-theme.hidesExplorerArrows": true,
-    "material-icon-theme.saturation": 1,
+    "material-icon-theme.saturation": 0,
     "editor.fontLigatures": true,
     "workbench.commandPalette.preserveInput": true,
     "workbench.list.multiSelectModifier": "alt",
     "workbench.sideBar.location": "left",
     "workbench.colorTheme": "Material Theme Darker",
+    "bracket-pair-colorizer-2.colors": [
+        "#a38667",
+        "#a8772e",
+        "#e6be85",
+    ],
 
     "ccls.codeLens.enabled": false,
     "ccls.completion.detailedLabel": true,
@@ -103,5 +108,7 @@
     "git.autofetch": true,
     "git.suggestSmartCommit": false,
     "ccls.index.onChange": true,
-    "editor.fontSize": 13
+    "editor.fontSize": 13,
+    "breadcrumbs.enabled": false,
+    "workbench.editor.showTabs": true,
 }
