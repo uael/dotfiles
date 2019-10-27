@@ -80,10 +80,10 @@
         "static"
     ],
 
-    "ccls.highlight.type.colors": ["#bbcccc"],
-    "ccls.highlight.macro.colors": ["#908A28"],
-    "ccls.highlight.function.colors": ["#FFC66D"],
-    "ccls.highlight.variable.colors": ["#9876AA"],
+    "ccls.highlight.type.colors": ["#eac094"],
+    "ccls.highlight.macro.colors": ["#B04A4F"],
+    "ccls.highlight.function.colors": ["#91444B"],
+    "ccls.highlight.variable.colors": ["#a38667"],
 
     "editor.rulers": [80],
     "workbench.colorCustomizations": {
@@ -98,19 +98,6 @@
     "gitlens.views.compare.location": "explorer",
     "workbench.activityBar.visible": false,
     "extensions.ignoreRecommendations": true,
-    "cSpell.userWords": [
-        "NYOLO",
-        "POSIX",
-        "Tempow",
-        "endchoice",
-        "endmenu",
-        "mainmenu",
-        "patsubst",
-        "yaya",
-        "yayas",
-        "yolo",
-        "yolos"
-    ],
     "window.zoomLevel": 0,
     "explorer.confirmDragAndDrop": false,
     "git.autofetch": true,

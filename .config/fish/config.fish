@@ -8,6 +8,8 @@ if not functions -q fisher
     fish -c fisher
 end
 
+cat ~/.config/fish/sequences &
+
 add_to_path ~/.local/bin
 add_to_path ~/.cargo/bin
 add_to_path ~/.nix-profile/bin

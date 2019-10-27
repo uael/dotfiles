@@ -21,21 +21,23 @@ in
     alsaUtils
     arc-theme
     arandr
-    gcc-arm-embedded
     bat
     brave
     capitaine-cursors
     ccls
     dunst
     dwm
+    feh
     jetbrains.clion
     cmake
     clang
     dmenu
     gawk
     gcc
+    gcc-arm-embedded
     gdb
     git
+    gnome3.nautilus
     gnumake
     gnupg
     gnuplot

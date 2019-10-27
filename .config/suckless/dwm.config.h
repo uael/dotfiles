@@ -5,16 +5,15 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "FuraCode Nerd Font:size=10",
-                                        "Material Design Icons:size=13", };
+static const char *fonts[]          = { "FuraCode Nerd Font:size=10", };
 static const char dmenufont[]       = "FuraCode Nerd Font:size=10";
-static const char col_gray[]        = "#212121";
-static const char col_white[]       = "#BBCCCC";
-static const char col_orange[]      = "#CC7832";
+static const char norm_fg[] = "#eac094";
+static const char norm_bg[] = "#212121";
+static const char sel_bg[] = "#91444b";
 static const char *colors[][3]      = {
-	/*               fg          bg        border   */
-	[SchemeNorm] = { col_white,  col_gray, col_gray   },
-	[SchemeSel]  = { col_orange, col_gray, col_orange },
+        /*               fg       bg       border */
+	[SchemeNorm] = { norm_fg, norm_bg, norm_bg },
+	[SchemeSel]  = { sel_bg,  norm_bg, sel_bg  },
 };
 
 /* tagging */
@@ -53,7 +52,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray, "-nf", col_white, "-sb", col_gray, "-sf", col_orange, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", norm_bg, "-sf", sel_bg, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *lockcmd[]  = { "slock", NULL };
 

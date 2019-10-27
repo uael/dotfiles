@@ -10,5 +10,6 @@ cursortheme=capitaine-cursors
   done
 )
 
+feh --bg-scale ~/.config/background.jpg
 slstatus &
 dwm

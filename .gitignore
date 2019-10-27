@@ -11,6 +11,7 @@
 !/.config/alacritty/
 !/.config/fish/
 /.config/fish/*
+!/.config/fish/sequences
 !/.config/fish/functions
 /.config/fish/functions/*
 !/.config/fish/functions/add_to_path.fish
@@ -22,8 +23,9 @@
 !/.config/Code/extensions.txt
 !/.config/Code/theme.json
 !/.config/nixpkgs/
-!/.config/suckless
+!/.config/suckless/
 !/.config/gtk-3.0/
+!/.config/background.jpg
 !/w
 /w/*
 !/w/suckless/

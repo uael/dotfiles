@@ -130,39 +130,39 @@ debug:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Base16 Default Dark)
+# Colors
 colors:
   # Default colors
   primary:
-    background: '0x181818'
-    foreground: '0xd8d8d8'
+    background: '0x212121'
+    foreground: '0xeac094'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0xd8d8d8'
-    cursor: '0xd8d8d8'
+    text:   '0x212121'
+    cursor: '0xeac094'
 
   # Normal colors
   normal:
-    black:   '0x181818'
-    red:     '0xab4642'
-    green:   '0xa1b56c'
-    yellow:  '0xf7ca88'
-    blue:    '0x7cafc2'
-    magenta: '0xba8baf'
-    cyan:    '0x86c1b9'
-    white:   '0xd8d8d8'
+    black:   '0x212121'
+    red:     '0x8C3D45'
+    green:   '0x91444B'
+    yellow:  '0xB04A4F'
+    blue:    '0xD05156'
+    magenta: '0xE45C58'
+    cyan:    '0xE86E52'
+    white:   '0xeac094'
 
   # Bright colors
   bright:
-    black:   '0x585858'
-    red:     '0xab4642'
-    green:   '0xa1b56c'
-    yellow:  '0xf7ca88'
-    blue:    '0x7cafc2'
-    magenta: '0xba8baf'
-    cyan:    '0x86c1b9'
-    white:   '0xf8f8f8'
+    black:   '0xa38667'
+    red:     '0x8C3D45'
+    green:   '0x91444B'
+    yellow:  '0xB04A4F'
+    blue:    '0xD05156'
+    magenta: '0xE45C58'
+    cyan:    '0xE86E52'
+    white:   '0xeac094'
 
 # Visual Bell
 #
