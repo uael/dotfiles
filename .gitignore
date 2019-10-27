@@ -5,7 +5,6 @@
 !.xinitrc
 !.xsession
 !.Xresources
-!.gtkrc-2.0
 !/.config
 /.config/*
 !/.config/alacritty/
