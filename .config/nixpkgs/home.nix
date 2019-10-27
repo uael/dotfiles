@@ -29,6 +29,7 @@ in
     dunst
     dwm
     feh
+    fish
     jetbrains.clion
     cmake
     clang
