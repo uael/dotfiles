@@ -36,6 +36,7 @@
         "enabled"
     ],
     "ccls.highlight.enum.face": [
+        "fontWeight: bolder",
         "variable",
         "member"
     ],
@@ -105,10 +106,25 @@
     "extensions.ignoreRecommendations": true,
     "window.zoomLevel": 0,
     "explorer.confirmDragAndDrop": false,
-    "git.autofetch": true,
+    "git.autofetch": false,
     "git.suggestSmartCommit": false,
     "ccls.index.onChange": true,
     "editor.fontSize": 13,
     "breadcrumbs.enabled": false,
     "workbench.editor.showTabs": true,
+    "scm.diffDecorationsGutterWidth": 1,
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.heatmap.enabled": false,
+
+    "scm.diffDecorations": "gutter",
+
+    "editorOverviewRuler.addedForeground": "#0000",
+    "editorOverviewRuler.modifiedForeground": "#0000",
+    "editorOverviewRuler.deletedForeground": "#0000",
+    "editor.overviewRulerBorder": false,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "errorLens.gutterIconSet": "circle",
+    "bracket-pair-colorizer-2.rulerPosition": "Left",
+    "color-highlight.markRuler": false,
 }

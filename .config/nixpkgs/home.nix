@@ -58,6 +58,7 @@ in
     slock
     slstatus
     tree
+    usbutils
     valgrind
     vanilla-dmz
     vlc

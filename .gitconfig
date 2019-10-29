@@ -2,4 +2,4 @@
 	name = uael
 	email = lucas.abel@yandex.com
 [core]
-	editor = code
+	editor = vim
