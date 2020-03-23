@@ -44,8 +44,8 @@ static const Layout layouts[] = {
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} },
+	{ MODKEY,                       KEY,      view,           {.ui = TAG} }, \
+	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = TAG} },
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
@@ -67,8 +67,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Down,   setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_Up,     setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
-	{ MODKEY,                       XK_m,      focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_m,      tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Right,  movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Left,   movestack,      {.i = -1 } },
 	TAGKEYS(                        XK_1,                      0)
