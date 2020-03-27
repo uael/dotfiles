@@ -1,5 +1,5 @@
 diff --git a/dwm.c b/dwm.c
-index 4465af1..7669aef 100644
+index 4465af1..b4152eb 100644
 --- a/dwm.c
 +++ b/dwm.c
 @@ -127,6 +127,7 @@ struct Monitor {
@@ -90,7 +90,7 @@ index 4465af1..7669aef 100644
  	Arg arg = {0};
  	Client *c;
  	Monitor *m;
-@@ -431,9 +426,14 @@ buttonpress(XEvent *e)
+@@ -431,12 +426,17 @@ buttonpress(XEvent *e)
  	}
  	if (ev->window == selmon->barwin) {
  		i = x = 0;
@@ -106,7 +106,11 @@ index 4465af1..7669aef 100644
 +		} while (ev->x >= x && ++i < LENGTH(tags));
  		if (i < LENGTH(tags)) {
  			click = ClkTagBar;
- 			arg.ui = 1 << i;
+-			arg.ui = 1 << i;
++			arg.ui = i;
+ 		} else if (ev->x < x + blw)
+ 			click = ClkLtSymbol;
+ 		else if (ev->x > selmon->ww - TEXTW(stext))
 @@ -503,6 +503,7 @@ cleanupmon(Monitor *mon)
  	else {
  		for (m = mons; m && m->next != mon; m = m->next);
