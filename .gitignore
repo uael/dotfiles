@@ -1,7 +1,7 @@
 /*
 !.gitignore
 !.gitmodules
-!.gitconfigi
+!.gitconfig
 !.xinitrc
 !.xsession
 !.Xresources
@@ -14,17 +14,8 @@
 !/.config/fish/functions
 /.config/fish/functions/*
 !/.config/fish/functions/add_to_path.fish
-!/.config/Code/
-/.config/Code/*
-!/.config/Code/User
-/.config/Code/User/*
-!/.config/Code/User/settings.json
-!/.config/Code/extensions.txt
-!/.config/Code/theme.json
 !/.config/nixpkgs/
 !/.config/suckless/
 !/.config/gtk-3.0/
+!/.config/gtk-2.0/
 !/.config/background.jpg
-!/w
-/w/*
-!/w/suckless/

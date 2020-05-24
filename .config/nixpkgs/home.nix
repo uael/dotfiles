@@ -21,65 +21,70 @@ let
        ${oldAttrs.postFixup}
     '';
   });
+  firamono = pkgs.fetchzip {
+    name = "firamono-nerdfont-2.1.0";
+
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraMono.zip";
+
+    postFetch = ''
+      mkdir -p $out/share/fonts/firamono-nerdfont
+      unzip -j $downloadedFile -d $out/share/fonts/firamono-nerdfont
+    '';
+
+    sha256 = "1gwh6m3p48wav0ckn7qzr43h1yn82627b7glkhn5dkffz0cphypa";
+
+    meta = with pkgs.lib; {
+      description = ''
+        Nerd Fonts is a project that attempts to patch as many developer targeted
+        and/or used fonts as possible. The patch is to specifically add a high
+        number of additional glyphs from popular 'iconic fonts' such as Font
+        Awesome, Devicons, Octicons, and others.
+      '';
+      homepage = https://github.com/ryanoasis/nerd-fonts;
+      license = licenses.mit;
+      platforms = platforms.all;
+    };
+  };
 in
 {
   nixpkgs.config = { allowUnfree = true; };
 
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  programs = {
+    home-manager.enable = true;
+    feh.enable = true;
+    man.enable = true;
+    lsd.enable = true;
+    bat.enable = true;
+  };
 
   home.packages = with pkgs; [
-    alacritty
-    alsaUtils
-    arandr
     acpi
-    bat
+    alacritty
+    arandr
+    arc-theme
+    arc-icon-theme
     binutils
-    bluez
     brave
     capitaine-cursors
-    #ccls
     discord
+    dmenu
     dunst
     dwm
-    feh
+    firamono
     fish
-    cmake
-    jetbrains.clion
-    #clion
-    clang
-    dmenu
-    gawk
-    gcc
-    #gcc_multi
-    gcc-arm-embedded
-    gdb
     git
-    gnome3.nautilus
-    gnumake
-    gnupg
-    gnuplot
-    hexedit
-    lldb
-    lsd
+    jetbrains.clion
     neofetch
     okular
     pango
     pavucontrol
-    python
     qbittorrent
-    #qemu
-    #rustup
     slock
     slstatus
-    tree
-    usbutils
-    valgrind
     vanilla-dmz
-    vlc
-    wireshark
-    zig
   ];
 
-  fonts.fontconfig.enableProfileFonts = true;
+  fonts.fontconfig.enable = true;
+
+  home.stateVersion = "20.03";
 }

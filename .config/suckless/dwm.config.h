@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "FuraCode Nerd Font:size=10", };
-static const char dmenufont[]       = "FuraCode Nerd Font:size=10";
+static const char *fonts[]          = { "FuraMono Nerd Font:size=10", };
+static const char dmenufont[]       = "FuraMono Nerd Font:size=10";
 static const char norm_fg[] = "#eac094";
 static const char norm_bg[] = "#212121";
 static const char sel_bg[] = "#91444b";
