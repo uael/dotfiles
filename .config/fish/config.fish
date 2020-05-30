@@ -10,6 +10,9 @@ end
 
 cat ~/.config/fish/sequences &
 
+# setup direnv (used by lorri)
+eval (direnv hook fish)
+
 add_to_path ~/.local/bin
 add_to_path ~/.cargo/bin
 add_to_path ~/.nix-profile/bin

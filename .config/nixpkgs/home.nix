@@ -49,6 +49,8 @@ in
 {
   nixpkgs.config = { allowUnfree = true; };
 
+  fonts.fontconfig.enable = true;
+
   programs = {
     home-manager.enable = true;
     feh.enable = true;
@@ -57,34 +59,36 @@ in
     bat.enable = true;
   };
 
-  home.packages = with pkgs; [
-    acpi
-    alacritty
-    arandr
-    arc-theme
-    arc-icon-theme
-    binutils
-    brave
-    capitaine-cursors
-    discord
-    dmenu
-    dunst
-    dwm
-    firamono
-    fish
-    git
-    jetbrains.clion
-    neofetch
-    okular
-    pango
-    pavucontrol
-    qbittorrent
-    slock
-    slstatus
-    vanilla-dmz
-  ];
+  services.lorri.enable = true;
 
-  fonts.fontconfig.enable = true;
-
-  home.stateVersion = "20.03";
+  home = {
+    stateVersion = "20.03";
+    packages = with pkgs; [
+      acpi
+      alacritty
+      arandr
+      arc-theme
+      arc-icon-theme
+      binutils
+      brave
+      capitaine-cursors
+      direnv
+      discord
+      dmenu
+      dunst
+      dwm
+      firamono
+      fish
+      git
+      clion
+      neofetch
+      okular
+      pango
+      pavucontrol
+      qbittorrent
+      slock
+      slstatus
+      vanilla-dmz
+    ];
+  };
 }
