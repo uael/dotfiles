@@ -17,8 +17,11 @@ let
       sha256 = "b476b1217d3e9d7bd7af655748c215e04d3350c0f9e3fefc7a3af76967856604";
     };
     postFixup = ''
-       ln -s $out/clion-${version} $out/clion-2020.1
+       #ln -s $out/clion-${version} $out/clion-2020.1.1
        ${oldAttrs.postFixup}
+       patchelf \
+            --set-rpath "${pkgs.lib.makeLibraryPath [ pkgs.stdenv.cc.cc.lib pkgs.zlib ]}" \
+            $out/clion-2020.1.1/bin/clang/linux/clangd
     '';
   });
   firamono = pkgs.fetchzip {
@@ -72,6 +75,7 @@ in
       binutils
       brave
       capitaine-cursors
+      clion
       direnv
       discord
       dmenu
@@ -80,7 +84,6 @@ in
       firamono
       fish
       git
-      clion
       neofetch
       okular
       pango
